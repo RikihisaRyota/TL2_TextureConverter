@@ -2,8 +2,6 @@
 #include <cstdlib>
 #include <assert.h>
 
-#include "Externals/DirectXTex/DirectXTex.h"
-
 #include "Src/TextureConverter.h"
 
 enum Argument {
@@ -16,6 +14,10 @@ enum Argument {
 int main(int argc, char* argv[]) {
 
 	assert(argc >= kNumArgument);
+	for (int i = 0; i < argc; i++) {
+		printf(argv[i]);
+		printf("\n");
+	}
 
 	// COMƒ‰ƒCƒuƒ‰ƒŠ‰Šú‰»
 	auto hr = CoInitializeEx(nullptr,COINIT_MULTITHREADED);
